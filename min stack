@@ -1,0 +1,36 @@
+Class MinStack{
+  Stack<Integer> st;
+  Stack<Integer> minSt;
+  int min;
+     public minStack(){
+          this.st = new Stack<>();
+          this.minSt = new Stack<>();
+          this.min = Integer.Max_VALUE;
+          this.minSt.push(min);
+       }
+    public void push(int val){
+        this.st.push(val);
+        this.min = Math.min(min, val);
+        this.minSt.push(min);
+
+    }
+  public void pop(){
+      st.pop();
+      minSt.pop();
+      min = minSt.peek();
+  }
+
+public int top(){
+    return st.peek();
+}
+public int min(){
+  return minSt.peek();
+}
+}
+
+
+
+
+
+
+}
